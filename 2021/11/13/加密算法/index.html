@@ -5,15 +5,20 @@
   
   <title>teshi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="22">
-<meta property="og:type" content="website">
+  <meta name="description" content="Base64¶Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特（因为 ），按照其值选择ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+&#x2F;中">
+<meta property="og:type" content="article">
 <meta property="og:title" content="teshi">
-<meta property="og:url" content="http://socialbiao.github.io/index.html">
+<meta property="og:url" content="http://socialbiao.github.io/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="teshi">
-<meta property="og:description" content="22">
+<meta property="og:description" content="Base64¶Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特（因为 ），按照其值选择ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+&#x2F;中">
 <meta property="og:locale">
+<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/c4becc8d811901597b9807eccff60f0897e3701a">
+<meta property="og:image" content="http://ob2hrvcxg.bkt.clouddn.com/20180822140744.png">
+<meta property="article:published_time" content="2021-11-13T08:36:42.504Z">
+<meta property="article:modified_time" content="2021-10-27T10:11:56.067Z">
 <meta property="article:author" content="Socialbiao">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/c4becc8d811901597b9807eccff60f0897e3701a">
   
     <link rel="alternative" href="/atom.xml" title="teshi" type="application/atom+xml">
   
@@ -31,9 +36,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
   <!-- 加载特效 -->
     <script src="/js/pace.js"></script>
@@ -43,8 +45,8 @@
           rootUrl: '/',
           fancybox: false,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -226,9 +228,7 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-加密算法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-加密算法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" class="article-date">
@@ -277,306 +277,177 @@
 
       
       
-    </div>
-    
-    <div class="article-info article-info-index">
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
       
-      
-
-      
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-指令" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/11/13/%E6%8C%87%E4%BB%A4/" class="article-date">
-      <time datetime="2021-11-13T08:36:42.486Z" itemprop="datePublished">2021-11-13</time>
-</a>
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"></a></p>
+        <p><span>文章作者:</span><a href="/" title="访问  的个人博客"></a></p>
+        <p><span>发布时间:</span>2021年11月13日 - 16时36分</p>
+        <p><span>最后更新:</span>2021年10月27日 - 18时11分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" title="">http://socialbiao.github.io/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://socialbiao.github.io/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
+
+
+
+<nav id="article-nav">
   
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">红色箭头指的位置有一个EAX，上面有一个CALL，我们已经知道了CALL是一个子程序，里面有多行语句，子程序的作用就是实现一个功能，你可以这样理解，执行一个CALL就相当于执行一个任务，任务完成以后的结果就放在EAX里面，所以在CALL下面很近的EAX里面存放的就是CALL执行的结果。</span><br><span class="line">那么这个结果对于破解有什么意义呢？如果我们编程人员把某个CALL做为验证的子程序，这个CALL的作用就是进行真假码的比较，如果比较的结果是真，那么就返回数值1，如果结果是假，就返回数值0，那么返回值1或者0就放在EAX里面，然后下面的条件跳转命令JZ、JNZ就根据是1还是0这个结果来决定跳还是不跳，明白了吗？EAX的意义就在于此，它里面存放的数值会决定程序以后的执行流程。那我们知道了EAX的意义又有什么用呢？你可以修改EAX的值，比如把0改成1就行了，在哪改呢？在CALL里面的代码的开头改成MOV EAX,1 ，下一句改成RETN。这样改的好处是什么呢？因为很多程序在验证的时候会在程序执行过程中多次进行验证，每次验证后都会有条件跳转指令，与其你改多个条件跳转指令，不如改一个验证CALL的返回值更省事。</span><br><span class="line">一些朋友想练手，我在附件里上传三个练习软件，你用我讲的方法练练手，玩一玩，你的信心来自于你的成功！</span><br><span class="line">第一个软件是没加壳的。第二个是加了壳的。第三个是多次调用同一个验证CALL。你可以在破解第三个软件的时候进入验证CALL，找到正确的密码。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+  
+    <a href="/2021/11/13/%E6%8C%87%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-<blockquote>
-<p>在程序上一个jz改为二进制op填充</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">刚刚学到的知识点，分享一下，加壳的进入后要CTRL+G 搜索401000，然后在这里搜索字符串，为什么是这里呢，因为90%的软件加壳都是从这里来解，那剩余部分就得知识更多时候再了解啦。</span><br></pre></td></tr></table></figure>
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Base64%C2%B6"><span class="toc-number">1.</span> <span class="toc-text">Base64</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tea%C2%B6"><span class="toc-number">2.</span> <span class="toc-text">Tea</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RC4%C2%B6"><span class="toc-number">3.</span> <span class="toc-text">RC4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MD5%C2%B6"><span class="toc-number">4.</span> <span class="toc-text">MD5</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
 
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
-  
-    <article id="post-新人破解" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/11/13/%E6%96%B0%E4%BA%BA%E7%A0%B4%E8%A7%A3/" class="article-date">
-      <time datetime="2021-11-13T08:36:42.465Z" itemprop="datePublished">2021-11-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
+
     
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="第六课"><a href="#第六课" class="headerlink" title="第六课"></a>第六课</h1><p>学会快速使用OD</p>
-<p>一 没有壳</p>
-<p><img src="C:\Users\DYS\AppData\Roaming\Typora\typora-user-images\image-20210917003731423.png" alt="image-20210917003731423"></p>
-<p>在其失败上面寻找call判断指令进入</p>
-<p>查找到判断test 将其nop掉</p>
-<p>2.多次返回</p>
-<p><img src="C:\Users\DYS\AppData\Roaming\Typora\typora-user-images\image-20210918003512822.png" alt="image-20210918003512822"></p>
-<p>找到弹窗之前的第一个“返回到”跟随定位到call，往上找je跳转改为jmp跳转，跳过第一个错误提示：</p>
-<p><img src="C:\Users\DYS\AppData\Roaming\Typora\typora-user-images\image-20210918003757872.png" alt="image-20210918003757872"></p>
-<p>作业：多次返回破解。本人使用的是虚拟机XP系统完成破解流程点。<br>1、首先打开OD ，运行，按f3打开 CM（多次返回到）.exe 文件。<br>2、按f9随意输入账户和密码，弹出“请输入七位有效数字”。<br>3、在OD界面点鼠标右键“中文搜索引擎”选择1 搜索ASCII,拉界面置顶，双击“请输入七位有效数字”。<br>4、在子程序入口CALL上面发现一个跳转指令JE，在信息框显示：跳转已实现。双击该指令修改为“jne 0040113F”使用NOP填充前打&#10004;，点汇编。<br>5、再次按f9运行程序，随意输入账户密码，之前弹出点“请输入七位有效数字”变成了“登录失败”，同理。在中文搜索界面双击“登录失败”，界面自动切换为OD“登录失败”界面。<br>6、在子程序入口CALL上面发现JMP无条件跳转指令，无视它，在call和jmp之间有个地址：004015e8 mov ebx，0x6，这个地址信息来自ebx=00000000跳转来自 004015A9，004015A9 显示跳转已实现 004015E8=CM（多次.004015E8，这个je 指令意思是等于则跳转je CM（多次.004015E8，下面就是“恭喜你，登陆成功”，你跳转里还怎么成功。所以必须更改这个指令。<br>6、双击这个指令，更改为jne 004015E8，也就是在je字母中间加一个N，填充后再填写账户密码。显示：“恭喜你，登陆成功”</p>
-<p><img src="C:\Users\DYS\AppData\Roaming\Typora\typora-user-images\image-20210918005445642.png" alt="image-20210918005445642">。<br>7、别开心的太早，还没完，低于1-6位数字都会显示“恭喜你，登陆成功”，超过七位就会弹出“登录账号不能超过6位字符”。<br>8、同理，找到“登录账号不能超过6位字符”地址0040108E，发现上面子程序call上面地址0040106B 跳转指令 jle CM（多次.004010AA信息栏显示“跳转未实现004010AA=CM（多次.004010AA”。修改jie为jmp指令帮它实现。此时对话款填写什么数字都显示“恭喜你，登陆成功”。唯独空格时候显示：“请输入登录账号和密码”，既然是学习，也把它和谐里吧。<br>9、地址0040152A 处将指令je修改jne，填充之。至此，关于所有“返回到”全部搞定。</p>
-<h1 id="第七课"><a href="#第七课" class="headerlink" title="第七课"></a>第七课</h1><h4 id="学习OD"><a href="#学习OD" class="headerlink" title="学习OD"></a>学习OD</h4><h4 id="1-CTRL-F9"><a href="#1-CTRL-F9" class="headerlink" title="1.CTRL+F9"></a>1.<strong>CTRL+F9</strong></h4><p>按一下CTRL+F9就可以让程序快速执行到你现在运行的子程序代码的结尾处。</p>
-
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
 
 
 
-
-
-
-
-
-
-  
-    <article id="post-加密与解密" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/11/13/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86/" class="article-date">
-      <time datetime="2021-11-13T08:36:42.436Z" itemprop="datePublished">2021-11-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="第一章基础知识"><a href="#第一章基础知识" class="headerlink" title="第一章基础知识"></a>第一章基础知识</h1><blockquote>
-<p>逆向工程内容：</p>
-</blockquote>
-<ol>
-<li>软件使用限制的去除或者软件功能的添加</li>
-<li>软件源代码的再获得</li>
-<li>硬件的复制和模拟</li>
-</ol>
-<blockquote>
-<p>逆向分析技术（一般途径和策略）</p>
-</blockquote>
-<ol>
-<li>通过软件使用说明和操作格式分析软件（设计思想、编程思路等）</li>
-<li> 静态分析技术：根据反汇编得到的程序清单进行分析（常用方法：从提示信息入手进行分析）-&gt;了解各个模块的功能以及编程思路-&gt;工具：IDA</li>
-<li>动态分析技术：动态跟踪-&gt;工具：OllyDbg、WinDbg -&gt;原因：<ol>
-<li> 模块之间的关联（存在中间结果）、分支和转移</li>
-<li> 不依赖系统重定位的初始化程序</li>
-<li> 加密变换需要进行解密</li>
-</ol>
-</li>
-</ol>
-<blockquote>
-<p>Windows运转的核心-&gt;动态链接-&gt;DLL</p>
-</blockquote>
-<blockquote>
-<p>3个主要DLL</p>
-</blockquote>
-<ol>
-<li> Kernel（KERNEL32.DLL）：操作系统核心服务，包括进程与线程管理、内存管理、文件访问等</li>
-<li> User（USER32.DLL）：负责处理用户接口，包括键盘和鼠标输入、窗口和菜单管理等</li>
-<li> GDI（GDI32.DLL）图形设备接口，允许程序在屏幕和打印机上显示文本和图形</li>
-</ol>
-<p>Win API中，‘A’表示ANSI，‘W’表示Widechars（Unicode）-&gt;如：MessageBoxA()和MessageBoxW()</p>
-<blockquote>
-<p>虚拟内存：</p>
-</blockquote>
-<ol>
-<li> 32位进程-&gt;地址空间4GB-&gt;00000000h~FFFFFFFFh</li>
-<li> 虚拟内存-&gt;通过映射（Map）可用虚拟地址4GB</li>
-<li> Windows-&gt;分时的多任务操作系统-&gt;CPU时间分成时间片-&gt;分配给不同程序-&gt;一个时间片内没每个程序相对独立（自己的4GB寻址空间）</li>
-</ol>
-<blockquote>
-<p>P.S.虚拟内存注意：</p>
-</blockquote>
-<ol>
-<li> 应用程序不会直接访问物理地址</li>
-<li> 虚拟内存管理器通过虚拟地址发访问请求来控制控制所有的物理地址访问</li>
-<li> 每个应用程序都有独立的4GB寻址空间，不同应用程序的地址空间是彼此隔离的</li>
-<li> DLL程序没有“私有”空间，它们总是被映射到其他应用程序的地址空间中，作为其他应用程序的一部分运行 &lt;- 如果DLL不与其他程序处于同一地址空间，应用程序将无法调用它</li>
-</ol>
-<h1 id="第二章-动态分析技术"><a href="#第二章-动态分析技术" class="headerlink" title="第二章 动态分析技术"></a>第二章 动态分析技术</h1><p>动态分析-&gt;工具：调试器：<br>用户模式：Ring3级，OD、x64dbg、VC++<br>内核模式：WinDbg（能调试操作系统内核）<br>UDD文件：OD的工程文件用于保存但前调试的一些状态</p>
-<p>部分代码含义：<br>虚拟地址：一般情况下，同一程序的同一条指令在不同系统环境下此值相同<br>机器码：CPU执行的机器代码<br>汇编指令：与机器码对应的程序代码<br>领空：某一时刻CPU的CS：EIP指向的某段代码的所有者<br>GetDlgItemText：<br>返回值：成功返回文本长度，失败返回0<br>A、W两个版本</p>
-<p>阅读代码注意：<br>清楚API定义<br>API函数大都采用_stdcall调用约定（参数从右到左入栈，有被调用者清理栈，返回值放入eax）要分析push指令（将参数入栈）<br>C代码中的子程序采用C调用约定，参数从右到左入栈，由调用者清理栈<br>爆破：通过屏蔽程序的某些功能或改变程序流程是保护的方式失效（如修改跳转指令）</p>
-<p>DRx调试寄存器：<br>DR0<del>DR3：调试地址寄存器<br>DR4</del>DR5：保留，未公开具体作用<br>DR6：调试寄存器组状态寄存器<br>DR7：调试寄存器组控制寄存器</p>
-<p>常用断点：<br>INT 3断点：<br>bp指令或F2</p>
-<p>本质是用INT 3指令替换内容（机器码0xCC，也成CC指令）<br>优点：可以设置无数个<br>缺点：改变机器码，易被API针对检测</p>
-<p>硬件断点：<br>右键-&gt;Breakpoint-&gt;Hardware,on execution<br>原理：使用DR0~DR3设定地址，使用DR7设定状态-&gt;最多4个硬件断点<br>优点：速度快，在INT 3断点易被发现处效果好<br>缺点：对多3个断点</p>
-<p>内存断点：<br>右键-&gt;Breakpoint-&gt;Memory,on access(write)<br>原理：对所设的地址予以不可访问/不可写属性，产生异常<br>P.S.硬件访问/写入断点是在触发硬件断点的下一条指令处；内存断点是在触发断点的指令处<br>存在代码检验（0xCC）且硬件断点失灵时，可以使用</p>
-<p>内存访问一次性断点：<br>Atl+M中显示内存-&gt;相应段上右键-&gt;Set break-on-access<br>中断发生后断点会被删除<br>用于捕捉调用或返回某个模块<br>P.S.此类断点仅在NT架构下可用（Windows的段页式管理）</p>
-<p>消息断点：<br>工具栏W -&gt;右键-&gt;Messsge breakpoint on ClassProc<br>调试时，没有合适的断点，可尝试<br>特定窗口函数接收到特定消息时，中断<br>P.S.与INT 3的区别：INT 3在程序启动前设置，消息断点在窗口被创建后才能被设置并拦截消息<br>捕捉断点后在系统代码中，无法使用快捷键（Ctrl/Alt+F9）回到领空-&gt;在内存窗口（M）中对.text区块下断（Set break-on-access）-&gt;F9消息循环处（-&gt;可能不是需要的按钮处理，重复1~2次能达到按钮事件代码处）</p>
-<p>条件断点：<br>本质：一个带有条件的INT 3断点<br>使用于寄存器、存储器、消息等</p>
-<p>条件记录断点：<br>具有条件断点的作用，同时记录断点处函数表达式或参数的值<br>Logdata窗口记录数据<br>其他调试器部分（暂略）：x64dbg、MDebug、WinDbg（很强大）</p>
-<p>断点：1.软件断点：bp 地址或符号 “中断时执行的命令”,bu 符号,bm 通配符 2.硬件断点：ba 3.条件断点：bp xxx “.if(){}.else{}”</p>
-<p>bl列出断点，bc删除断点，bd禁止断点，be启用断点，br改变断点编号<br>k查看栈回溯，kb查看栈回溯并显示栈上的前三个参数，kp栈回溯显示参数原型，kv在kb加上调用约定，kd显示栈中的数据</p>
-<blockquote>
-<p>内存命令：<br>d系列命令查看内存，<br>s - [type] range pattern 在指定内存范围内搜索字符串,[type]表示数据格式，b是byte，w是word，d是dword，a是ascii，u是unicode，默认是b<br>e系列修改内存：两种格式：<br>1.改字符串：e{a|u|za|zu}，za，zu代表以0结尾的ascii和unicode字符串，a，u相反<br>2.改值：e{a|b|d|D|f|q|u|w}</p>
-</blockquote>
-<blockquote>
-<p>查看内存属性：!address [address]</p>
-</blockquote>
-
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/11/13/hello-world/" class="article-date">
-      <time datetime="2021-11-13T08:25:55.949Z" itemprop="datePublished">2021-11-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/11/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-      
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2021/11/13/%E6%8C%87%E4%BB%A4/" title="下一篇: ">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">加密算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E6%8C%87%E4%BB%A4/">指令</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E6%96%B0%E4%BA%BA%E7%A0%B4%E8%A7%A3/">新人破解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86/">加密与解密</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/hello-world/">Hello World</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
 
 
-
-
-
-
-
-
-
-  
-  
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
