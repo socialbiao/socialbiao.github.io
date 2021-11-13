@@ -239,12 +239,22 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">加密算法</a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Base64¶"><a href="#Base64¶" class="headerlink" title="Base64¶"></a>Base64<a target="_blank" rel="noopener" href="https://wiki.x10sec.org/reverse/identify-encode-encryption/introduction/#base64">¶</a></h2><p>Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特（因为 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c4becc8d811901597b9807eccff60f0897e3701a" alt="{\displaystyle 2^{6}=64}">），按照其值选择<code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code>中的字符作为编码后的输出，直到全部输入数据转换完成。</p>
+        <h2 id="Base64¶"><a href="#Base64¶" class="headerlink" title="Base64¶"></a>Base64<a target="_blank" rel="noopener" href="https://wiki.x10sec.org/reverse/identify-encode-encryption/introduction/#base64">¶</a></h2><p>Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特，按照其值选择<code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code>中的字符作为编码后的输出，直到全部输入数据转换完成。</p>
 <p>通常而言 Base64 的识别特征为索引表，当我们能找到 <code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code> 这样索引表，再经过简单的分析基本就能判定是 Base64 编码。</p>
-<p><img src="http://ob2hrvcxg.bkt.clouddn.com/20180822140744.png" alt="img"></p>
 <p>当然，有些题目 base64 的索引表是会变的，一些变种的 base64 主要 就是修改了这个索引表。</p>
 <h2 id="Tea¶"><a href="#Tea¶" class="headerlink" title="Tea¶"></a>Tea<a target="_blank" rel="noopener" href="https://wiki.x10sec.org/reverse/identify-encode-encryption/introduction/#tea">¶</a></h2><p>在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6">密码学</a>中，<strong>微型加密算法</strong>（Tiny Encryption Algorithm，TEA）是一种易于描述和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E6%89%A7%E8%A1%8C&action=edit&redlink=1">执行</a>的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%A1%8A%E5%AF%86%E7%A2%BC">块密码</a>，通常只需要很少的代码就可实现。其设计者是<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%89%91%E6%A1%A5%E5%A4%A7%E5%AD%A6">剑桥大学计算机实验室</a>的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%8D%AB%C2%B7%E6%83%A0%E5%8B%92&action=edit&redlink=1">大卫 · 惠勒</a>与<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E7%BD%97%E6%9D%B0%C2%B7%E5%B0%BC%E8%BE%BE%E5%A7%86&action=edit&redlink=1">罗杰 · 尼达姆</a>。</p>
 <p>参考代码：</p>
@@ -312,68 +322,24 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/11/13/%E6%8C%87%E4%BB%A4/">指令</a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">红色箭头指的位置有一个EAX，上面有一个CALL，我们已经知道了CALL是一个子程序，里面有多行语句，子程序的作用就是实现一个功能，你可以这样理解，执行一个CALL就相当于执行一个任务，任务完成以后的结果就放在EAX里面，所以在CALL下面很近的EAX里面存放的就是CALL执行的结果。</span><br><span class="line">那么这个结果对于破解有什么意义呢？如果我们编程人员把某个CALL做为验证的子程序，这个CALL的作用就是进行真假码的比较，如果比较的结果是真，那么就返回数值1，如果结果是假，就返回数值0，那么返回值1或者0就放在EAX里面，然后下面的条件跳转命令JZ、JNZ就根据是1还是0这个结果来决定跳还是不跳，明白了吗？EAX的意义就在于此，它里面存放的数值会决定程序以后的执行流程。那我们知道了EAX的意义又有什么用呢？你可以修改EAX的值，比如把0改成1就行了，在哪改呢？在CALL里面的代码的开头改成MOV EAX,1 ，下一句改成RETN。这样改的好处是什么呢？因为很多程序在验证的时候会在程序执行过程中多次进行验证，每次验证后都会有条件跳转指令，与其你改多个条件跳转指令，不如改一个验证CALL的返回值更省事。</span><br><span class="line">一些朋友想练手，我在附件里上传三个练习软件，你用我讲的方法练练手，玩一玩，你的信心来自于你的成功！</span><br><span class="line">第一个软件是没加壳的。第二个是加了壳的。第三个是多次调用同一个验证CALL。你可以在破解第三个软件的时候进入验证CALL，找到正确的密码。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<blockquote>
+        <blockquote>
 <p>在程序上一个jz改为二进制op填充</p>
 </blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">刚刚学到的知识点，分享一下，加壳的进入后要CTRL+G 搜索401000，然后在这里搜索字符串，为什么是这里呢，因为90%的软件加壳都是从这里来解，那剩余部分就得知识更多时候再了解啦。</span><br></pre></td></tr></table></figure>
-      
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-新人破解" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2021/11/13/%E6%96%B0%E4%BA%BA%E7%A0%B4%E8%A7%A3/" class="article-date">
-      <time datetime="2021-11-13T08:36:42.465Z" itemprop="datePublished">2021-11-13</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="第六课"><a href="#第六课" class="headerlink" title="第六课"></a>第六课</h1><p>学会快速使用OD</p>
-<p>一 没有壳</p>
-<p><img src="C:\Users\DYS\AppData\Roaming\Typora\typora-user-images\image-20210917003731423.png" alt="image-20210917003731423"></p>
-<p>在其失败上面寻找call判断指令进入</p>
-<p>查找到判断test 将其nop掉</p>
-<p>2.多次返回</p>
-<p><img src="C:\Users\DYS\AppData\Roaming\Typora\typora-user-images\image-20210918003512822.png" alt="image-20210918003512822"></p>
-<p>找到弹窗之前的第一个“返回到”跟随定位到call，往上找je跳转改为jmp跳转，跳过第一个错误提示：</p>
-<p><img src="C:\Users\DYS\AppData\Roaming\Typora\typora-user-images\image-20210918003757872.png" alt="image-20210918003757872"></p>
-<p>作业：多次返回破解。本人使用的是虚拟机XP系统完成破解流程点。<br>1、首先打开OD ，运行，按f3打开 CM（多次返回到）.exe 文件。<br>2、按f9随意输入账户和密码，弹出“请输入七位有效数字”。<br>3、在OD界面点鼠标右键“中文搜索引擎”选择1 搜索ASCII,拉界面置顶，双击“请输入七位有效数字”。<br>4、在子程序入口CALL上面发现一个跳转指令JE，在信息框显示：跳转已实现。双击该指令修改为“jne 0040113F”使用NOP填充前打&#10004;，点汇编。<br>5、再次按f9运行程序，随意输入账户密码，之前弹出点“请输入七位有效数字”变成了“登录失败”，同理。在中文搜索界面双击“登录失败”，界面自动切换为OD“登录失败”界面。<br>6、在子程序入口CALL上面发现JMP无条件跳转指令，无视它，在call和jmp之间有个地址：004015e8 mov ebx，0x6，这个地址信息来自ebx=00000000跳转来自 004015A9，004015A9 显示跳转已实现 004015E8=CM（多次.004015E8，这个je 指令意思是等于则跳转je CM（多次.004015E8，下面就是“恭喜你，登陆成功”，你跳转里还怎么成功。所以必须更改这个指令。<br>6、双击这个指令，更改为jne 004015E8，也就是在je字母中间加一个N，填充后再填写账户密码。显示：“恭喜你，登陆成功”</p>
-<p><img src="C:\Users\DYS\AppData\Roaming\Typora\typora-user-images\image-20210918005445642.png" alt="image-20210918005445642">。<br>7、别开心的太早，还没完，低于1-6位数字都会显示“恭喜你，登陆成功”，超过七位就会弹出“登录账号不能超过6位字符”。<br>8、同理，找到“登录账号不能超过6位字符”地址0040108E，发现上面子程序call上面地址0040106B 跳转指令 jle CM（多次.004010AA信息栏显示“跳转未实现004010AA=CM（多次.004010AA”。修改jie为jmp指令帮它实现。此时对话款填写什么数字都显示“恭喜你，登陆成功”。唯独空格时候显示：“请输入登录账号和密码”，既然是学习，也把它和谐里吧。<br>9、地址0040152A 处将指令je修改jne，填充之。至此，关于所有“返回到”全部搞定。</p>
-<h1 id="第七课"><a href="#第七课" class="headerlink" title="第七课"></a>第七课</h1><h4 id="学习OD"><a href="#学习OD" class="headerlink" title="学习OD"></a>学习OD</h4><h4 id="1-CTRL-F9"><a href="#1-CTRL-F9" class="headerlink" title="1.CTRL+F9"></a>1.<strong>CTRL+F9</strong></h4><p>按一下CTRL+F9就可以让程序快速执行到你现在运行的子程序代码的结尾处。</p>
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">刚刚学到的知识点，分享一下，加壳的进入后要CTRL+G 搜索401000，然后在这里搜索字符串，为什么是这里呢，因为90%的软件加壳都是从这里来解，那剩余部分就得知识更多时候再了解啦。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
       
     </div>

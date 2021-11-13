@@ -3,22 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>teshi</title>
+  <title>加密算法 | teshi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Base64¶Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特（因为 ），按照其值选择ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+&#x2F;中">
+  <meta name="description" content="Base64¶Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特，按照其值选择ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+&#x2F;中的字符作为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="teshi">
+<meta property="og:title" content="加密算法">
 <meta property="og:url" content="http://socialbiao.github.io/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="teshi">
-<meta property="og:description" content="Base64¶Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特（因为 ），按照其值选择ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+&#x2F;中">
+<meta property="og:description" content="Base64¶Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特，按照其值选择ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+&#x2F;中的字符作为">
 <meta property="og:locale">
-<meta property="og:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/c4becc8d811901597b9807eccff60f0897e3701a">
-<meta property="og:image" content="http://ob2hrvcxg.bkt.clouddn.com/20180822140744.png">
 <meta property="article:published_time" content="2021-11-13T08:36:42.504Z">
-<meta property="article:modified_time" content="2021-10-27T10:11:56.067Z">
+<meta property="article:modified_time" content="2021-11-13T08:49:07.004Z">
 <meta property="article:author" content="Socialbiao">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wikimedia.org/api/rest_v1/media/math/render/svg/c4becc8d811901597b9807eccff60f0897e3701a">
   
     <link rel="alternative" href="/atom.xml" title="teshi" type="application/atom+xml">
   
@@ -239,12 +236,29 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      加密算法
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Base64¶"><a href="#Base64¶" class="headerlink" title="Base64¶"></a>Base64<a target="_blank" rel="noopener" href="https://wiki.x10sec.org/reverse/identify-encode-encryption/introduction/#base64">¶</a></h2><p>Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特（因为 <img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/c4becc8d811901597b9807eccff60f0897e3701a" alt="{\displaystyle 2^{6}=64}">），按照其值选择<code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code>中的字符作为编码后的输出，直到全部输入数据转换完成。</p>
+        <h2 id="Base64¶"><a href="#Base64¶" class="headerlink" title="Base64¶"></a>Base64<a target="_blank" rel="noopener" href="https://wiki.x10sec.org/reverse/identify-encode-encryption/introduction/#base64">¶</a></h2><p>Base64 是一种基于 64 个可打印字符来表示二进制数据的表示方法。转换的时候，将 3 字节的数据，先后放入一个 24 位的缓冲区中，先来的字节占高位。数据不足 3 字节的话，于缓冲器中剩下的比特用 0 补足。每次取出 6 比特，按照其值选择<code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code>中的字符作为编码后的输出，直到全部输入数据转换完成。</p>
 <p>通常而言 Base64 的识别特征为索引表，当我们能找到 <code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code> 这样索引表，再经过简单的分析基本就能判定是 Base64 编码。</p>
-<p><img src="http://ob2hrvcxg.bkt.clouddn.com/20180822140744.png" alt="img"></p>
 <p>当然，有些题目 base64 的索引表是会变的，一些变种的 base64 主要 就是修改了这个索引表。</p>
 <h2 id="Tea¶"><a href="#Tea¶" class="headerlink" title="Tea¶"></a>Tea<a target="_blank" rel="noopener" href="https://wiki.x10sec.org/reverse/identify-encode-encryption/introduction/#tea">¶</a></h2><p>在<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6">密码学</a>中，<strong>微型加密算法</strong>（Tiny Encryption Algorithm，TEA）是一种易于描述和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E6%89%A7%E8%A1%8C&action=edit&redlink=1">执行</a>的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%A1%8A%E5%AF%86%E7%A2%BC">块密码</a>，通常只需要很少的代码就可实现。其设计者是<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%89%91%E6%A1%A5%E5%A4%A7%E5%AD%A6">剑桥大学计算机实验室</a>的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E5%A4%A7%E5%8D%AB%C2%B7%E6%83%A0%E5%8B%92&action=edit&redlink=1">大卫 · 惠勒</a>与<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/w/index.php?title=%E7%BD%97%E6%9D%B0%C2%B7%E5%B0%BC%E8%BE%BE%E5%A7%86&action=edit&redlink=1">罗杰 · 尼达姆</a>。</p>
 <p>参考代码：</p>
@@ -329,12 +343,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/"></a></p>
+        <p><span>本文标题:</span><a href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">加密算法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问  的个人博客"></a></p>
         <p><span>发布时间:</span>2021年11月13日 - 16时36分</p>
-        <p><span>最后更新:</span>2021年10月27日 - 18时11分</p>
+        <p><span>最后更新:</span>2021年11月13日 - 16时49分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" title="">http://socialbiao.github.io/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</a>
+            <span>原始链接:</span><a class="post-url" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/" title="加密算法">http://socialbiao.github.io/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/</a>
             <span class="copy-path" data-clipboard-text="原文: http://socialbiao.github.io/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/　　作者: " title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
@@ -350,7 +364,7 @@
   
   
     <a href="/2021/11/13/%E6%8C%87%E4%BB%A4/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">指令</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -418,12 +432,12 @@
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2021/11/13/%E6%8C%87%E4%BB%A4/" title="下一篇: ">
+            <a href="/2021/11/13/%E6%8C%87%E4%BB%A4/" title="下一篇: 指令">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">加密算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E6%8C%87%E4%BB%A4/">指令</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E6%96%B0%E4%BA%BA%E7%A0%B4%E8%A7%A3/">新人破解</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86/">加密与解密</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95/">加密算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E6%8C%87%E4%BB%A4/">指令</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/%E5%8A%A0%E5%AF%86%E4%B8%8E%E8%A7%A3%E5%AF%86/">加密与解密</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/11/13/hello-world/">Hello World</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
